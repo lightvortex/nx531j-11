@@ -4,6 +4,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.gnss@1.0-impl-qti
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_PROPRIETARY_MODULE := true
 LOCAL_SRC_FILES := \
     AGnss.cpp \
     Gnss.cpp \
@@ -59,8 +60,9 @@ endif # BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET
 ifeq ($(BUILD_GNSS_HIDL_SERVICE), true)
 include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.gnss@1.0-service-qti
-LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_MODULE_OWNER := qti
+LOCAL_PROPRIETARY_MODULE := true
 LOCAL_INIT_RC := android.hardware.gnss@1.0-service-qti.rc
 LOCAL_SRC_FILES := \
     service.cpp \
