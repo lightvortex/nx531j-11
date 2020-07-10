@@ -372,7 +372,8 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libbase_shim
+    libbase_shim \
+    libcamshim
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \

@@ -42,6 +42,27 @@ function blob_fixup() {
     vendor/bin/imsrcsd)
         patchelf --add-needed "libbase_shim.so" "${2}"
         ;;
+
+    # Patch RIL blobs for VNDK
+    vendor/lib64/lib-dplmedia.so)
+        patchelf --remove-needed "libmedia.so" "${2}"
+        ;;
+        
+    # Patch Camera blobs for VNDK
+    vendor/lib/libmmcamera2_stats_modules.so)
+        sed -i "s|libgui.so|libfui.so|g" "${2}"
+        sed -i "s|libandroid.so|libcamshim.so|g" "${2}"
+        ;;
+
+    # Patch Camera blobs for VNDK
+    vendor/lib/libmmcamera_ppeiscore.so)
+        sed -i "s|libgui.so|libfui.so|g" "${2}"
+        ;;
+
+    # Patch Camera blobs for VNDK
+    vendor/lib/libmpbase.so)
+        patchelf --remove-needed "libandroid.so" "${2}"
+        ;;
     esac
 }
 
@@ -93,7 +114,5 @@ sed -i "s|/data/misc/camera/cam_socket|/data/vendor/qcam/cam_socket|g" "$DEVICE_
 # Fingerprint blobs
 sed -i "s|/data/misc/stargate|/data/vendor/stargate|g" "${DEVICE_BLOB_ROOT}"/vendor/lib64/hw/fingerprint.msm8996.so
 sed -i "s|/data/misc/stargate|/data/vendor/stargate|g" "${DEVICE_BLOB_ROOT}"/vendor/lib64/lib_fpc_tac_shared.so
-
-
 
 "${MY_DIR}"/setup-makefiles.sh
