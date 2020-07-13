@@ -81,17 +81,17 @@ namespace qcamera {
 
 #define MAX_RAW_STREAMS        1
 #define MAX_STALLING_STREAMS   1
-#define MAX_PROCESSED_STREAMS  3
+#define MAX_PROCESSED_STREAMS  10
 /* Batch mode is enabled only if FPS set is equal to or greater than this */
-#define MIN_FPS_FOR_BATCH_MODE (120)
-#define PREVIEW_FPS_FOR_HFR    (30)
-#define DEFAULT_VIDEO_FPS      (30.0)
+#define MIN_FPS_FOR_BATCH_MODE (100)
+#define PREVIEW_FPS_FOR_HFR    (45)
+#define DEFAULT_VIDEO_FPS      (45.0)
 #define MAX_HFR_BATCH_SIZE     (8)
 #define REGIONS_TUPLE_COUNT    5
 #define HDR_PLUS_PERF_TIME_OUT  (7000) // milliseconds
 #define BURST_REPROCESS_PERF_TIME_OUT  (1000) // milliseconds
 
-#define FLUSH_TIMEOUT 3
+#define FLUSH_TIMEOUT 1
 
 #define METADATA_MAP_SIZE(MAP) (sizeof(MAP)/sizeof(MAP[0]))
 
