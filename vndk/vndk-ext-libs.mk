@@ -15,6 +15,9 @@
 #
 
 EXTRA_VENDOR_LIBRARIES_32 := \
+    android.hardware.audio.common-util \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.display.config@1.0 \
     libandroidicu \
     libaudioclient \
     libaudiomanager \
@@ -43,4 +46,7 @@ EXTRA_VENDOR_LIBRARIES_32 := \
     libvibrator
 
 EXTRA_VENDOR_LIBRARIES_64 := \
+    android.hardware.audio.common-util \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.display.config@1.0 \
     libpowermanager
