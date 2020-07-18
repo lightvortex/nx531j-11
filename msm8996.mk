@@ -259,6 +259,7 @@ PRODUCT_BOOT_JARS += \
     ims-ext-common_system 
 
 # Input
+TARGET_USES_HARDWARE_KEYS := true
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/nubia_synaptics_dsx.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/nubia_synaptics_dsx.kl \
 
