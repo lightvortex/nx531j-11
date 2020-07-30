@@ -195,3 +195,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.havoc.maintainer=LightVortex
+    
+# Gsi
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.phh.disable_audio_effects=1 \
+    persist.bluetooth.bluetooth_audio_hal.disabled=false
