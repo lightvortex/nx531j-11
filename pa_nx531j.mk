@@ -22,14 +22,14 @@ TARGET_SCREEN_WIDTH := 1920
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common havoc stuff.
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+# Inherit some common AOSPA stuff.
+$(call inherit-product, vendor/pa/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/nubia/nx531j/msm8996.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := havoc_nx531j
+PRODUCT_NAME := pa_nx531j
 PRODUCT_DEVICE := nx531j
 PRODUCT_BRAND := nubia
 PRODUCT_MODEL := nx531j
@@ -41,9 +41,6 @@ TARGET_VENDOR_PRODUCT_NAME := NX531J
 TARGET_VENDOR_DEVICE_NAME := NX531J
 
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=NX531J PRODUCT_NAME=NX531J PRODUCT_MODEL=NX531J
-
-# Official HavocOS
-HAVOC_BUILD_TYPE := Treble-Official
 
 # Build info
 BUILD_FINGERPRINT := "google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys"
