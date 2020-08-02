@@ -95,6 +95,11 @@ PRODUCT_PACKAGES += \
     AntHalService \
     antradio_app  
 
+# A2DP    
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.a2dp@1.0-impl \
+    android.hardware.bluetooth.a2dp@1.0-service
+    
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
