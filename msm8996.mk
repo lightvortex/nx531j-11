@@ -247,11 +247,8 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0_system \
-    android.hidl.manager@1.0-java \
-    android.hidl.manager@1.0 \
-    android.hidl.manager@1.0_system \
+    libhidltransport \
+    libhidltransport.vendor \
     libhwbinder \
     libhwbinder.vendor
 
@@ -344,7 +341,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.nubia-libperfmgr
+    android.hardware.power-service-qti
 
 # Protobuf
 PRODUCT_PACKAGES += \
