@@ -257,10 +257,10 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    ims-ext-common_system 
+    ims-ext-common_system.nx531j
 
 PRODUCT_BOOT_JARS += \
-    ims-ext-common_system 
+    ims-ext-common_system.nx531j
 
 # Input
 PRODUCT_COPY_FILES += \
