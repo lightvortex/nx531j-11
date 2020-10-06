@@ -14,4 +14,10 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_nx531j.mk
+    $(LOCAL_DIR)/potato_nx531j.mk
+    
+
+COMMON_LUNCH_CHOICES := \
+    potato_nx531j-user \
+    potato_nx531j-userdebug \
+    potato_nx531j-eng
