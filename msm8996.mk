@@ -254,10 +254,7 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    ims-ext-common_system.nx531j
-
-PRODUCT_BOOT_JARS += \
-    ims-ext-common_system.nx531j
+    ims-ext-common
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -403,8 +400,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
 
 # TextClassifier
 PRODUCT_PACKAGES += \
