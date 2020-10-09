@@ -23,13 +23,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common havoc stuff.
-$(call inherit-product, vendor/potato/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/nubia/nx531j/msm8996.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := potato_nx531j
+PRODUCT_NAME := lineage_nx531j
 PRODUCT_DEVICE := nx531j
 PRODUCT_BRAND := nubia
 PRODUCT_MODEL := nx531j
