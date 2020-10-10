@@ -98,7 +98,7 @@ AUDIO_FEATURE_ENABLED_SPKR_PROTECTION := true
 AUDIO_FEATURE_ENABLED_SOURCE_TRACKING := true
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
-BOARD_USES_ALSA_AUDIO := true
+#BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
@@ -193,7 +193,6 @@ TARGET_USES_INTERACTION_BOOST := true
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_USE_SDCLANG := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.qcom
@@ -211,7 +210,7 @@ VENDOR_SECURITY_PATCH := 2020-02-20
 
 # SELinux
 #include device/qcom/sepolicy-legacy-um/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
+BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/temp
 #I know its dirty ill remove it after fixing sensors
 SELINUX_IGNORE_NEVERALLOWS := true
 
