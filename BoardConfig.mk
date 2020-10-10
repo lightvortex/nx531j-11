@@ -207,6 +207,10 @@ BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
 #I know its dirty ill remove it after fixing sensors
 SELINUX_IGNORE_NEVERALLOWS := true
 
+# vndk
+BOARD_VNDK_VERSION := current
+BOARD_VNDK_RUNTIME_DISABLE := true
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true

@@ -138,7 +138,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_tasha.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tasha.xml
+    $(LOCAL_PATH)/audio/mixer_paths_tasha.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tasha.xml \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
@@ -200,7 +201,8 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libqdMetaData.system \
     libtinyxml \
-    vendor.display.config@1.0
+    vendor.display.config@1.0 \
+    vendor.display.config@1.0_vendor
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -443,7 +445,8 @@ PRODUCT_COPY_FILES += \
     
 # VNDK
 PRODUCT_PACKAGES += \
-    vndk-sp
+    vndk_package \
+    libstdc++.vendor
     
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss@1.0.so:system/lib64/android.hardware.gnss@1.0-v27.so
