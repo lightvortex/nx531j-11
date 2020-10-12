@@ -25,6 +25,13 @@ $(call inherit-product, vendor/nubia/nx531j/nx531j-vendor.mk)
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk )
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    hardware/qcom-caf/msm8996/display \
+    hardware/qcom-caf/msm8996/audio \
+    hardware/qcom-caf/msm8996/media
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -450,9 +457,9 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v28.so
     
 # Verity
-PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/7464900.sdhci/by-name/system
-PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc/7464900.sdhci/by-name/vendor
-$(call inherit-product, build/target/product/verity.mk)
+#PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/7464900.sdhci/by-name/system
+#PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc/7464900.sdhci/by-name/vendor
+#$(call inherit-product, build/target/product/verity.mk)
 
 
 # WiFi
