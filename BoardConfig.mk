@@ -60,9 +60,9 @@ TARGET_KERNEL_SOURCE := kernel/nubia/msm8996
 TARGET_KERNEL_CONFIG := nx531j_defconfig
 
 # system-as-root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-BOARD_KERNEL_CMDLINE += skip_initramfs rootwait ro init=/init root=/dev/dm-0
-BOARD_KERNEL_CMDLINE += dm=\"system none ro,0 1 android-verity /dev/mmcblk0p17\"
+#BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+#BOARD_KERNEL_CMDLINE += skip_initramfs rootwait ro init=/init root=/dev/dm-0
+#BOARD_KERNEL_CMDLINE += dm=\"system none ro,0 1 android-verity /dev/mmcblk0p17\"
 
 # HAX: Remove AOSP
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
@@ -155,9 +155,9 @@ TARGET_HW_DISK_ENCRYPTION := true
 TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/config.fs
 
 # CAF HALs
-TARGET_QCOM_AUDIO_VARIANT := caf-msm8996
-TARGET_QCOM_MEDIA_VARIANT := caf-msm8996
-TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
+#TARGET_QCOM_AUDIO_VARIANT := caf-msm8996
+#TARGET_QCOM_MEDIA_VARIANT := caf-msm8996
+#TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(VENDOR_PATH)/framework_manifest.xml
@@ -187,7 +187,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/bus/i2c/devices/12-0020/wake_gesture"
 #TARGET_USES_NON_LEGACY_POWERHAL := true
 TARGET_USES_INTERACTION_BOOST := true
 
-# QCOM
+# QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
