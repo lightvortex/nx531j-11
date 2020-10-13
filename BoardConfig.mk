@@ -184,10 +184,6 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 TARGET_USES_MKE2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
-# Treble
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-PRODUCT_FULL_TREBLE_OVERRIDE := true
-
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/sys/bus/i2c/devices/12-0020/wake_gesture"
 #TARGET_USES_NON_LEGACY_POWERHAL := true
@@ -209,6 +205,10 @@ TARGET_USES_OLD_MNC_FORMAT := true
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-02-20
+
+# VNDK
+BOARD_VNDK_VERSION := current
+BOARD_VNDK_RUNTIME_DISABLE := true
 
 # SELinux
 #include device/qcom/sepolicy-legacy-um/sepolicy.mk
