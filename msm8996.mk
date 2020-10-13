@@ -22,6 +22,13 @@ $(call inherit-product, build/target/product/verity.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/nubia/nx531j/nx531j-vendor.mk)
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    hardware/qcom-caf/msm8996/display \
+    hardware/qcom-caf/msm8996/audio \
+    hardware/qcom-caf/msm8996/media
+
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk )
 
