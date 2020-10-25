@@ -112,7 +112,7 @@ done
 sed -i "s|/data/misc/camera/cam_socket|/data/vendor/qcam/cam_socket|g" "$DEVICE_BLOB_ROOT"/vendor/bin/mm-qcamera-daemon
 
 # Fingerprint blobs
-sed -i "s|/data/misc/stargate|/data/vendor/stargate|g" "${DEVICE_BLOB_ROOT}"/vendor/lib64/hw/fingerprint.msm8996.so
-sed -i "s|/data/misc/stargate|/data/vendor/stargate|g" "${DEVICE_BLOB_ROOT}"/vendor/lib64/lib_fpc_tac_shared.so
+#sed -i "s|/data/misc/stargate|/data/vendor/stargate|g" "${DEVICE_BLOB_ROOT}"/vendor/lib64/hw/fingerprint.msm8996.so
+#sed -i "s|/data/misc/stargate|/data/vendor/stargate|g" "${DEVICE_BLOB_ROOT}"/vendor/lib64/lib_fpc_tac_shared.so
 
 "${MY_DIR}"/setup-makefiles.sh

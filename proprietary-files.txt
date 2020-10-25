@@ -1,80 +1,101 @@
-# Audio ACDB 
-vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
-vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
+# Audio ACDB
+vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_General_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Handset_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Hdmi_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb
 vendor/etc/acdbdata/adsp_avs_config.acdb
-
-# ANT+ - system - from miui_DAISYGlobal_V11.0.2.0.QDLMIXM_d59f395371_10.0
--lib/libantradio.so|76795ae01c5a1d4f8e15ebc1ff8a7f6282cd6797
--lib64/libantradio.so|6ffd4e9ab3107358d9a4484d4b10430026fa9bf4
-product/lib64/com.qualcomm.qti.ant@1.0.so|f40868ad57012f1a512b14c889bc8380652cc50f
-
-# ANT+ (vendor)
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
-vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
 
 # ADSP
 vendor/bin/adsprpcd
 vendor/lib64/libadsprpc.so
 vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libcdsprpc.so
 vendor/lib64/libfastcvadsp_stub.so
-vendor/lib64/libfastcvopt.so
-vendor/lib64/libmdsprpc.so
-vendor/lib64/libsdsprpc.so
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
-vendor/lib/libcdsprpc.so
+vendor/lib/libadsp_hvx_callback_skel.so
+vendor/lib/libadsp_hvx_stub.so
 vendor/lib/libfastcvadsp_stub.so
-vendor/lib/libfastcvopt.so
-vendor/lib/libmdsprpc.so
-vendor/lib/libsdsprpc.so
 
-# ADSP - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
-vendor/lib/libadsp_hvx_callback_skel.so|b7e47d8d0c011caea30daf974de81eb01bb90268
-vendor/lib/libadsp_hvx_stub.so|5842e47b5929e15c8b63f1aa4795ca3432debebb
+# ADSP modules
+vendor/lib/rfsa/adsp/libadsp_fd_skel.so
+vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so
+vendor/lib/rfsa/adsp/libadsp_hvx_skel.so
+vendor/lib/rfsa/adsp/libadsp_hvx_stats.so
+vendor/lib/rfsa/adsp/libadsp_hvx_zzhdr_BGGR.so
+vendor/lib/rfsa/adsp/libadsp_hvx_zzhdr_RGGB.so
+vendor/lib/rfsa/adsp/libapps_mem_heap.so
+vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
+vendor/lib/rfsa/adsp/libscveT2T_skel.so
+vendor/lib/rfsa/adsp/libdspCV_skel.so
+vendor/lib/rfsa/adsp/libexternal_dog_skel.so
+vendor/lib/rfsa/adsp/libfastcvadsp.so
+vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
+vendor/lib/rfsa/adsp/libvpp_svc_skel.so
+vendor/lib/rfsa/adsp/libvpp_frc.so
+vendor/lib/rfsa/adsp/us-syncproximity.so
+vendor/lib/rfsa/adsp/libdirac-appi.so
 
-# ADSP (modules) - from zl1
-vendor/lib/rfsa/adsp/libadsp_fd_skel.so|5607a78451b621bb6399878ab58ba896c72797ab
-vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so|035272c1d77bcd04e3a838056d512964744c9322
-vendor/lib/rfsa/adsp/libadsp_hvx_skel.so|6a1d6ee55cc65d0f12f6a9bfd04823b46d2d6a24
-vendor/lib/rfsa/adsp/libadsp_hvx_stats.so|2f6abffe644ed918ff1a7e0e330f8e9c32add72c
-vendor/lib/rfsa/adsp/libadsp_hvx_zzhdr_BGGR.so|3f82d78a7c9e88c5fdc02dc0761349e4ab95abf8
-vendor/lib/rfsa/adsp/libadsp_hvx_zzhdr_RGGB.so|b21151ad414cd7310117fceb924a72fd20e97257
-vendor/lib/rfsa/adsp/libapps_mem_heap.so|fd362c6b0e30f62cc3fc4566855f46706d2c3c50
-vendor/lib/rfsa/adsp/libdspCV_skel.so|c9f4a3e0f15e5964e3c1a81d0776119ac5d75f07
-vendor/lib/rfsa/adsp/libfastcvadsp.so|f3e9a7d633d5892e588facb879244946a5c52acf
-vendor/lib/rfsa/adsp/libfastcvadsp_skel.so|6ea74532d714708e3eabcc52506f493f3a3dbe7f
-vendor/lib/rfsa/adsp/libobjectMattingApp_skel.so|ecb82e7046d0dd8ddcaae4cbdac18372ef397877
-vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so|6778d36d87e9e7265a64680c8513b4ca4688c361
-vendor/lib/rfsa/adsp/libscveCleverCapture_skel.so|c9d22f05edf5731b4dc14c78d4f6dabafe9a86c8
-vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|59341b81f60f86be804314bbe815401d7dc2c9dd
-vendor/lib/rfsa/adsp/libscveT2T_skel.so|1824c3bf56ebe8e2414c7c3f5d84227ea3dee691
-vendor/lib/rfsa/adsp/libscveTextReco_skel.so|e4a961413b463460c5571d847be1752a55a50600
-vendor/lib/rfsa/adsp/libvpp_frc.so|d0e36fe8d0bafa4848823fd0186212e58f88084c
-vendor/lib/rfsa/adsp/libvpp_svc_skel.so|c2852313b59cc4b2a002acf6081feaa1f6435154
-vendor/lib/rfsa/adsp/us-syncproximity.so|136ec0bae527f7fc81a18f8bf42526219b1bd480
+# ANT+ (system) - from enchilada - PKQ1.180716.001
+lib64/com.qualcomm.qti.ant@1.0.so|199481b290856fb63f5c5bf6def426b43309becb
+-lib64/libantradio.so|fb958cb68c99c71455f969afdf96225f5110f0df
+lib/com.qualcomm.qti.ant@1.0.so|fcd6a7130c480bfe4e4d9cc00702ed8444cddc82
+-lib/libantradio.so|7506f2577f2f1068688b623ca85e432be9c3dac9
 
-# Audio
+# ANT+ (vendor)
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
+vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
+
+# Audio libraries
+etc/permissions/audiosphere.xml
+framework/audiosphere.jar
+vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libqcbassboost.so
+vendor/lib64/soundfx/libqcreverb.so
+vendor/lib64/soundfx/libqcvirt.so
+vendor/lib64/soundfx/libshoebox.so
+vendor/lib64/libacdb-fts.so
+vendor/lib64/libacdbloader.so
+vendor/lib64/libacdbrtac.so
+vendor/lib64/libadiertac.so
+vendor/lib64/libaudcal.so
+vendor/lib64/libaudioalsa.so
+vendor/lib64/libmdsprpc.so
+vendor/lib64/libqtigef.so
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libdirac.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
+vendor/lib/soundfx/libshoebox.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
+vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libaudioalsa.so
-vendor/lib/libaudioparsers.so
+vendor/lib/libmdsprpc.so
 vendor/lib/libqtigef.so
+
+# Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/libbtnv.so
+vendor/lib64/libbt-hidlclient.so
 
 # Bluetooth (aptX) - from crosshatch - QP1A.190711.020
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
 # Bluetooth (shared dependencies)
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
+
+# Charger
+vendor/bin/hvdcp_opti
 
 # Camera Configs
 vendor/etc/camera/msm8996_camera.xml
@@ -297,11 +318,6 @@ vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
 vendor/firmware/cpp_firmware_v1_10_0.fw
 
-
-# Charger
-vendor/bin/hvdcp_opti
-
-
 # CNE - from miui_DAISYGlobal_V11.0.2.0.QDLMIXM_d59f395371_10.0
 etc/cne/Nexus/ATT/ATT_profiles.xml|33e568627fd3f94dc45bca1c01ad10e6d8fb5b52
 etc/cne/Nexus/ROW/ROW_profiles.xml|238e785e9674b27c4b2365958d127533d7293132
@@ -363,7 +379,6 @@ vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|53794a8d4dfeb0fbd233a4b1287
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|35ad6e08d00e8b1695964fa7d6ddbc521eda8628
 vendor/lib64/vendor.qti.latency@2.0.so|0144eec541989f450695ec8cbdd595df4009fe1a
 
-
 # DPM - from miui_DAISYGlobal_V11.0.2.0.QDLMIXM_d59f395371_10.0
 product/bin/dpmd|cac8f3eadeeec202f56d5b5f7a8c75e82e376d9f
 product/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
@@ -383,7 +398,6 @@ vendor/etc/init/dpmQmiMgr.rc|67569302d3a8828a9118c835e5b69c51b0c8ac68
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|a70cfc1be3e06cde6318d6969e114429fe1950bb
 vendor/lib64/libdpmqmihal.so|25d74c0e867f023b71a7c599ab6d213c7de2725d
 
-
 # DRM and SEE
 vendor/bin/qseecomd
 vendor/lib64/libGPreqcancel.so
@@ -401,11 +415,13 @@ vendor/bin/hw/android.hardware.drm@1.1-service.widevine|2c2455a218eb8d5368f1ccd3
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|5a01d337c1d375ee24a6c8992ba91f54afb7637e
 vendor/lib/libwvhidl.so|37333d17980282275805807bc648bf8516fd4143
 
+# fingerprint
+vendor/lib64/hw/fingerprint.msm8996.so
+vendor/lib64/lib_fpc_tac_shared.so
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.msm8996.so
 vendor/lib/hw/gatekeeper.msm8996.so
-
 
 # GPS - from daisy - PKQ1.180917.001
 lib64/vendor.qti.gnss@1.0.so|90b465adc4542f16fbdd935d0592df73d778909b
@@ -567,17 +583,22 @@ vendor/lib/hw/sound_trigger.primary.msm8996.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 
-# Media - from miui_DAISYGlobal_V11.0.2.0.QDLMIXM_d59f395371_10.0
-lib/extractors/libmmparserextractor.so|4178c228bdb7120cfdd6fd8ea4325cad9942f702
-lib/libFileMux.so|1c713da8d18f03deb33c3211761fc07dd57d6946
-lib/libmmosal.so|9464733295e192301b2577f52fab720e72c0d152
-lib/libmmparser_lite.so|c3656bbcd33d44d5b22743061261989fffd0382f
-lib/libOmxMux.so|6f1a1f5fc8f9a8683e6fb719b6fe51a68c6b0e84
-lib64/libmmosal.so|9ceff2581e86d32bc2795dffb96ebe4bdc88f2f7
--vendor/lib/libgpustats.so|75fc8f58b071f3c27d708010e1b40eafba091a14
+# Machine learning
+-vendor/etc/lm/ReferenceFeature.xml|7d45c05b5f2457d031e88307f30b2ea958417042
+vendor/lib64/liblearningmodule.so
+vendor/lib64/libmeters.so
+vendor/lib64/libreffeature.so
+
+# Media - from daisy - QKQ1.191002.002
+system/lib64/libFileMux.so|8d07dde58a8b629ccce4dd9c778e76a6513ca555
+system/lib64/libmmosal.so|9ceff2581e86d32bc2795dffb96ebe4bdc88f2f7
+system/lib64/libmmparser_lite.so|bea6788f2f0924c74a3bb7c1fdd24bc59202550c
+system/lib/libFileMux.so|1c713da8d18f03deb33c3211761fc07dd57d6946
+system/lib/libOmxMux.so|6f1a1f5fc8f9a8683e6fb719b6fe51a68c6b0e84
+system/lib/libmmosal.so|9464733295e192301b2577f52fab720e72c0d152
+system/lib/libmmparser_lite.so|c3656bbcd33d44d5b22743061261989fffd0382f
+vendor/lib64/libgpustats.so|a899ae72983277442cdacf8f43271986c91ce710
 vendor/lib/libI420colorconvert.so|0dfd4d0e49f4250e98e781483048a296a679e05e
-vendor/lib/libmm-color-convertor.so|7c74d36d42dc79fc58afe0f4323b76cc1297d36e
-vendor/lib/libmmosal_proprietary.so|4b0788590e1ecfccd3b20b3181a4add528acb2b6
 vendor/lib/libOmxAacDec.so|55772a6d0cf3e6a5a2c32348fd7096b8737d490b
 vendor/lib/libOmxAlacDec.so|adca064b15a7d545075af6f5222db45dec8202b5
 vendor/lib/libOmxAlacDecSw.so|8700268f92a953549e5936af9d5ccd08f99ed50f
@@ -585,14 +606,19 @@ vendor/lib/libOmxAmrDec.so|61ca4a96027a610b74621bd3f9caff3f34e4eab5
 vendor/lib/libOmxAmrwbplusDec.so|f0ebf6b19f569862fa8da05653148e867ba38878
 vendor/lib/libOmxApeDec.so|49b4090d2f82963e596dd2fabb30b7fe8551a21b
 vendor/lib/libOmxApeDecSw.so|d1276d42ad37fbd263ab96f9f353d4e782bb0fe9
-vendor/lib/libOmxDsdDec.so|57760dbfd7098d5f1c1c8fb12973f715ba30aac6
 vendor/lib/libOmxEvrcDec.so|20a6be418df26f48751b4178f5642e3fc6902690
-vendor/lib/libOmxG711Dec.so|da79b377947eeeb843b028ac3272a81f2be6a5f1
 vendor/lib/libOmxQcelp13Dec.so|27a75185e62e88ea84ac2448a3842c998899ae90
 vendor/lib/libOmxVideoDSMode.so|84a6b99f5ad0c7dbe827eb01258cca4c790c0fe7
+vendor/lib/libOmxVpp.so|46e4928c392716943986a3b490680d3e08fdf3e4
 vendor/lib/libOmxWmaDec.so|c3da756ae14234ae8e56cbc0b32249fbd4c8746a
+vendor/lib/libgpustats.so|75fc8f58b071f3c27d708010e1b40eafba091a14
+vendor/lib/libmm-color-convertor.so|7c74d36d42dc79fc58afe0f4323b76cc1297d36e
+vendor/lib/libmmosal_proprietary.so|4b0788590e1ecfccd3b20b3181a4add528acb2b6
+vendor/lib/libvpplibrary.so|816a79fe9a6d30e9402acb767119b9ee1c2c8aea
 vendor/lib/libvqzip.so|24e5eb30e5a2cdb544c8688d81d7cc75a1d85eaf
--vendor/lib64/libgpustats.so|a899ae72983277442cdacf8f43271986c91ce710
+
+# NFC firmware
+vendor/lib/libpn548ad_fw.so
 
 # NFC - SmartCardService
 etc/permissions/org.simalliance.openmobileapi.xml
@@ -605,31 +631,32 @@ vendor/etc/perf-profile0.conf
 vendor/lib64/libqti-perfd-client.so
 vendor/lib/libqti-perfd-client.so
 
-# Energy Awareness
-vendor/bin/energy-awareness
+# Peripheral manager
+vendor/bin/pm-proxy
+vendor/bin/pm-service
+vendor/lib64/libperipheral_client.so
+vendor/lib/libperipheral_client.so
 
-# Peripheral manager - from tissot - OPR1.170623.026
-vendor/bin/pm-proxy|e12c72d05c764a2c45b2a5d4d1886519cba3fb16
-vendor/bin/pm-service|83fac998bf8f651f2f0cd2385f6e1b7c3eefe5ea
-vendor/lib64/libperipheral_client.so|d6db5efd4667ae3e831403f4e313fa38a5ae7bc8
-
-# Postprocessing - from miui_DAISYGlobal_V11.0.2.0.QDLMIXM_d59f395371_10.0
-vendor/bin/hw/vendor.display.color@1.0-service|dd461fbbbdc7175b8e1e37eba19bc1c48111b5b6
-vendor/bin/mm-pp-dpps|5d68b2ae07de96e33d1c1b7698994ec2b219e084
+# Postprocessing - from op3 - PKQ1.181203.001
+vendor/bin/hw/vendor.display.color@1.0-service|2ca340c7fd7689ac8ddf36f948fd95a7cd3bfc2e
+vendor/bin/mm-pp-dpps|c89656e2349f6c81fe9a26e7c70e304ea77e1079
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
-vendor/lib64/libdisp-aba.so|8131a967a51959d88006a20b1f12ced0bf075e4c
-vendor/lib64/vendor.display.color@1.0.so|e90c75046ba1f6f677b9f719caaae8d91d1a5cde
-vendor/lib64/vendor.display.color@1.1.so|0e6a94dafc8ff10e54bae0004fe01e5f24ea3d33
-vendor/lib64/vendor.display.color@1.2.so|53b7d9d754f8909700d4b79c3145a209f638c7fd
-vendor/lib64/vendor.display.postproc@1.0.so|2c389d80a5c5cc87608babf29a056a74d69697e4
+vendor/lib64/libdisp-aba.so|95cafbc303cbf3017c7f10276454ef908b258b1c
+vendor/lib64/vendor.display.color@1.0.so|a41a76b08f60c0e8787d0e5b6a3155f11f58a5fc
+vendor/lib64/vendor.display.color@1.1.so|388404f39cd0c2dd3ea9fc59ee950edf24f78a87
+vendor/lib64/vendor.display.color@1.2.so|da1c83747c7bb4a64cf380bdb889cb811b67bc2e
+vendor/lib64/vendor.display.postproc@1.0.so|f6dae960f3f4eea0d5d36aea4ac0a2e0039691f5
 
-# Power-off alarm - from miui_DAISYGlobal_V11.0.2.0.QDLMIXM_d59f395371_10.0
--product/app/PowerOffAlarm/PowerOffAlarm.apk|46387fe02067df3c4c09ec49fff7737473ea1145
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|28c768324a36e12a8c4a1a968caa25ad94a160fe
-vendor/bin/power_off_alarm|a98e375328492c0405d1712722bca0effa8cf2bb
+# Power-off alarm - from daisy - PKQ1.180917.001
+framework/vendor.qti.hardware.alarm-V1.0-java.jar|ca5bf830ebb4fbf8fc1994200ec6e03dc83c274b
+-vendor/app/PowerOffAlarm/PowerOffAlarm.apk|3fbc64ee84b17eaaf5f9002b58f4615216de0389
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|b7f648c81773214202aaa3620863d048c90713c7
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|656009a5cc2b3bc52a7706579a192a1f3328f37c
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|78f8db9acff8b3461d6d37c747b1bdb59e547bb5
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|df138b77fb116a1a786a70c9c76b69d61b5c04d2
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|5761eae471e8dcd94ce139e831a1aa5b23f133c6
+
+# Power-off charging daemon
+-sbin/charger:bin/chargeonlymode|664dfa548b81cac348f1699222160f8d2b4d247c
 
 # QMI - from tissot - OPR1.170623.026
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
@@ -719,75 +746,59 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/sensors.oem.so
 
-# Thermal - from op3 - OPR1.170623.032
-vendor/bin/thermal-engine|ab1d429f5b859c9f10b91db25de9b5f5b7ce5a49
--vendor/lib64/libthermalclient.so|7f2a2b0bc3614cf6411ea11c85ac1b6a8392738f
-vendor/lib64/libthermalioctl.so|4d11093bc25909edc8df3e1164f5fb990c9e8975
--vendor/lib/libthermalclient.so|e14cd4d090e52394cb5a39912e71b50091873bcb
+# Thermal - from op3 - PKQ1.181203.001
+vendor/bin/thermal-engine|b15c9e8fa54ebb15dfeb36c7fbc834a28b4c836e
+-vendor/lib64/libthermalclient.so|94424d7c8f8daff8bbfd7454fe4d5f1fbf411260
+vendor/lib64/libthermalioctl.so|aa2a0abd8fb9792024efd93f648c129b6a22619e
+-vendor/lib/libthermalclient.so|270ea373c617584af092dc4ea2aa1c7bf27be7f4
 
-# Time services - from miui_DAISYGlobal_V11.0.2.0.QDLMIXM_d59f395371_10.0
-bin/move_time_data.sh|56f1f79a88db709a0c7ed5c507b14c55976d6f32
+# Time services - from daisy - PKQ1.180917.001
 -vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon|75b8a6a14cfb4424499ccb2bf1cad011df295d0e
-vendor/lib64/libtime_genoff.so|06df52867790cdbbcc674a3a28d7ad7c8cc161ac
-
-# fingerprint
-vendor/lib64/hw/fingerprint.msm8996.so
-vendor/lib64/lib_fpc_tac_shared.so
-
-# NFC firmware
-vendor/lib/libpn548ad_fw.so
-
-# Wi-Fi - from oneplus3t - OnePlus/OnePlus3/OnePlus3T:9/PKQ1.181203.001/1911042108 - OOS 9.0.6
-vendor/bin/cnss-daemon|608267c5ff979a1b102c46547be37ce1d2631324
-
-# Wi-Fi Display
-bin/wfdservice
-etc/init/wfdservice.rc
-etc/wfdconfig.xml
-etc/wfdconfigsink.xml
--framework/WfdCommon.jar
-lib/com.qualcomm.qti.wifidisplayhal@1.0.so
-lib/libFileMux.so
-lib/libmmosal.so
-lib/libmmparser_lite.so
-lib/libmmrtpdecoder.so
-lib/libmmrtpencoder.so
-lib/libOmxMux.so
-lib/libwfdavenhancements.so
-lib/libwfdclient.so
-lib/libwfdcodecv4l2.so
-lib/libwfdcommonutils.so
-lib/libwfdconfigutils.so
-lib/libwfdmminterface.so
-lib/libwfdmmsink.so
-lib/libwfdmmsrc.so
-lib/libwfdnative.so
-lib/libwfdrtsp.so
-lib/libwfdservice.so
-lib/libwfdsm.so
-lib/libwfduibcinterface.so
-lib/libwfduibcsinkinterface.so
-lib/libwfduibcsink.so
-lib/libwfduibcsrcinterface.so
-lib/libwfduibcsrc.so
-lib64/libmmosal.so
-lib64/libwfdclient.so
-lib64/libwfdnative.so
--priv-app/WfdService/WfdService.apk
-vendor/bin/wifidisplayhalservice
-vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
-vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so
-lib/com.qualcomm.qti.wifidisplayhal@1.0.so:vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
-vendor/lib/libmmosal_proprietary.so
-vendor/lib/libwfdcommonutils_proprietary.so
-vendor/lib/libwfdhaldsmanager.so
-vendor/lib/libwfdhdcpcp.so
-vendor/lib/libwfdmmservice.so
-vendor/lib/libwfdmodulehdcpsession.so
+vendor/bin/time_daemon|d67f1c50583b5efca0f5baea00a51056a798b7f8
+vendor/lib64/libtime_genoff.so|8f4c1f9ace6af463b241b130d6872b5d39cc7b2a
 
 # Other firmware
 vendor/firmware/nubia_tp_jdi_fw.img
 vendor/firmware/tfa98xx.cnt
 vendor/firmware/pressure-dev-ndt.bin
 
+# WiFi
+vendor/bin/cnss-daemon
+
+# WiFi Display - from daisy - QKQ1.191002.002
+system/bin/wfdservice|934817e5689fe6f8b54032902de58c203b8ec2e7
+system/etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
+system/etc/wfdconfig.xml|d07f6b0441c0aa8913865100239490fa8687a020
+system/etc/wfdconfigsink.xml|5b4a96f251fd83c2eee520d06bea2b5b159fcd36
+-system/framework/WfdCommon.jar|3440607d29511e1a671e565a2acc4d262e38a9fb
+system/lib64/libwfdclient.so|ef47176ace77a2e90a7c45515280b36591168ecc
+system/lib64/libwfdnative.so|587b774c4eb49f188747dd80d67426e68d87d396
+system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|ae4ba4448820bae832db16c4d64bd547bff13503
+system/lib/libmmrtpdecoder.so|c4d8d4ec093a24e2d158ffe1edb408aeb83e5edb
+system/lib/libmmrtpencoder.so|c1d969d3600a9b9a7505e4d1f18ab3ac0f111406
+system/lib/libwfdavenhancements.so|9faebc424959e2152adf4c1e970cc451952b21f9
+system/lib/libwfdclient.so|83ee273e2e73ea9c281fcb235e7df3e98f3dc3be
+system/lib/libwfdcodecv4l2.so|e91a1ca28b6f24327a36db7bb845ff8feac44a06
+system/lib/libwfdcommonutils.so|67bb07f383a8e071401d624ae49482ff310f65d6
+system/lib/libwfdconfigutils.so|a22f6334af429bac7410e9052708cbbfb37017fe
+system/lib/libwfdmminterface.so|feb2b5323b5ce8da54b69e0fcec17e02197210fc
+system/lib/libwfdmmsink.so|b9fc0b2d454d39c9e10b22aad34af30d33337eee
+system/lib/libwfdmmsrc.so|cd7bf20683715262be75ba4c26a547f2d7329cdf
+system/lib/libwfdnative.so|19fcd406b721891ea7df7a7c95de42fa26fdfb14
+system/lib/libwfdrtsp.so|48045ceab0d26790cae12cf4911c2a7406623800
+system/lib/libwfdservice.so|8ddad35794289805d6c855c237c9cc90161c8f66
+system/lib/libwfdsm.so|e15c5495b28fa5be0ed87f684bf39664ff3082e1
+system/lib/libwfduibcinterface.so|91a3d55861725aef0747c14809c1bd547485de66
+system/lib/libwfduibcsink.so|b8ef4abf2c67cf5e9f187b71cda4195171bb15ed
+system/lib/libwfduibcsinkinterface.so|dbe5c8f89a37b1d2d27bc3224695b97cfc5a71e3
+system/lib/libwfduibcsrc.so|58d43f5593a7c0a6929c0ed3aef02386fbc0afc8
+system/lib/libwfduibcsrcinterface.so|4eba1e3a541bc433eb75cf74807591fd16618c74
+-system/priv-app/WfdService/WfdService.apk|311d2726d96beba2baa28b6c73dcb6f8a3d99d40
+vendor/bin/wifidisplayhalservice|53f17ca800499f18514c4a68bff571491404ead6
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|04e463342cbba4c0e9c311a18238f95dec9359fd
+vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so|52a65f99b4c2a9e27aed76c5fa16fd89fabb4558
+vendor/lib/libwfdcommonutils_proprietary.so|f9fd5853ab1655e868555c6a20b017509436f07b
+vendor/lib/libwfdhaldsmanager.so|fdd9d1c5a7e75684ad2039e0ce24a1e5ee308833
+vendor/lib/libwfdhdcpcp.so|e459d08d32b9d93f498413172625861d3cc08c5c
+vendor/lib/libwfdmmservice.so|f180f820e507d7ed2676b0d66d6d63cb74458563
+vendor/lib/libwfdmodulehdcpsession.so|4800ec57f1a546200389b98221145a310c5d6aca

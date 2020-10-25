@@ -128,6 +128,12 @@ on post-fs-data
     mkdir /data/vendor/audio/acdbdata 0770 media audio
     mkdir /data/vendor/audio/acdbdata/delta 0770 media audio
 
+    # Create directory used by audio subsystem
+    mkdir /data/misc/audio 0770 audio audio
+    # Create directory for audio delta files
+    mkdir /data/misc/audio/acdbdata 0770 media audio
+    mkdir /data/misc/audio/acdbdata/delta 0770 media audio
+
     # Create directory for radio
     mkdir /data/vendor/radio 0770 system radio
 
