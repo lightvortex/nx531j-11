@@ -202,7 +202,7 @@ TARGET_USES_OLD_MNC_FORMAT := true
 VENDOR_SECURITY_PATCH := 2020-02-20
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/sepolicy.mk
+#include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
 #I know its dirty ill remove it after fixing sensors
 SELINUX_IGNORE_NEVERALLOWS := true
@@ -222,6 +222,11 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 
 # Inherit from the proprietary version
 include vendor/nubia/nx531j/BoardConfigVendor.mk
