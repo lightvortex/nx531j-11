@@ -199,7 +199,8 @@ PRODUCT_PACKAGES += \
     libdisplayconfig \
     liboverlay \
     libqdMetaData.system \
-    libtinyxml
+    libtinyxml \
+    vendor.display.config@1.0
 
 # DRM
 PRODUCT_PACKAGES += \

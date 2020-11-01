@@ -9,8 +9,60 @@ ifndef BOARD_VNDK_VERSION
 # libs will be copied to vndk-sp directory.
 # However, some of those libs need FWK-ONLY libs, which must be listed here
 # manually.
+$(warning ************* BOARD VNDK is not enabled - compiling vndk-sp ***************************)
 VNDK_SP_LIBRARIES := \
+    android.hardware.graphics.mapper@2.0 \
+    android.hardware.graphics.mapper@2.1 \
+    android.hardware.graphics.mapper@3.0 \
+    android.hardware.graphics.common@1.0 \
+    android.hardware.graphics.common@1.1 \
+    android.hardware.graphics.common@1.2 \
+    android.hardware.renderscript@1.0 \
+    android.hidl.memory@1.0 \
+    android.hidl.memory.token@1.0 \
+    android.hidl.safe_union@1.0 \
+    libRSCpuRef \
+    libRSDriver \
+    libRS_internal \
+    libbacktrace \
+    libbase \
+    libbcinfo \
+    libbinderthreadstate \
+    libblas \
+    libc++ \
+    libcompiler_rt \
+    libcutils \
     libdexfile_support \
+    libhardware \
+    libhidlbase \
+    libhidlmemory \
+    libhidltransport \
+    libhwbinder_noltopgo \
+    libhwbinder \
+    libion \
+    libjsoncpp \
+    liblzma \
+    libprocessgroup \
+    libunwind \
+    libunwindstack \
+    libutils \
+    libutilscallstack \
+    libz
+
+EXTRA_VENDOR_LIBRARIES := \
+    android.hidl.base@1.0 \
+    vendor.display.config@1.0 \
+    vendor.display.config@1.1 \
+    vendor.display.config@1.2 \
+    vendor.display.config@1.3 \
+    vendor.display.config@1.4 \
+    vendor.display.config@1.5 \
+    vendor.display.config@1.6 \
+    vendor.display.config@1.7 \
+    vendor.display.config@1.8 \
+    vendor.display.config@1.9 \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.cryptfshw@1.0
 
 install_in_hw_dir := \
    android.hidl.memory@1.0-impl
@@ -60,13 +112,13 @@ VNDK_SP_LIBRARIES := $(filter-out libz,$(VNDK_SP_LIBRARIES))
 $(foreach lib,$(VNDK_SP_LIBRARIES),\
     $(eval $(call define-vndk-sp-lib,$(lib))))
 
+install_in_hw_dir :=
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := vndk-sp
+LOCAL_MODULE_OWNER := google
 LOCAL_MODULE_TAGS := optional
 LOCAL_REQUIRED_MODULES := $(addsuffix .vndk-sp-gen,$(VNDK_SP_LIBRARIES))
 include $(BUILD_PHONY_PACKAGE)
-
-install_in_hw_dir :=
-vndk_sp_dir :=
-
 endif
+
