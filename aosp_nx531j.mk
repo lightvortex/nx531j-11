@@ -31,7 +31,7 @@ $(call inherit-product, vendor/mk/config/common_full_phone.mk)
 $(call inherit-product, device/nubia/nx531j/msm8996.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := mk_nx531j
+PRODUCT_NAME := aosp_nx531j
 PRODUCT_DEVICE := nx531j
 PRODUCT_BRAND := nubia
 PRODUCT_MODEL := nx531j
@@ -47,8 +47,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=NX531J PRODUCT_NAME=NX531J PRODUCT
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="NX531J-user 7.1.1 NMF26F eng.nubia.20171115.174132 release-keys" \
     TARGET_DEVICE="NX531J"
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mk.maintainer=chenzc
 
 BUILD_FINGERPRINT=nubia/NX531J/NX531J:7.1.1/NMF26F/nubia11151741:user/release-keys
